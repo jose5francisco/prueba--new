@@ -1,0 +1,352 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*fuentes de google fonts
+font-family: 'Jura', sans-serif; fuente para el menu
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Prata', serif;
+*/
+/*diseño para el menu*/
+.header ul {
+    justify-content: flex-end;
+    display: flex;
+    list-style: none;
+    font-family: 'Jura', sans-serif;
+}
+nav .logo {
+  margin-left: 15px;
+  margin-top: 15px;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+nav .icono {
+    padding: 0 10px;
+}
+.header {
+    letter-spacing: 2px;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+}
+.header ul ul {
+    position: absolute;
+    top: 100px;
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+    transform: translateX(-40%);
+  opacity: 0;
+    transition: .6s;
+}
+.header ul li:hover ul {
+    opacity: 1;
+    transform: translateX(0%);
+}
+#segundo-nav {
+    padding: 20px 12px;
+    text-align: center;
+}
+#primer-nav {
+    box-shadow: 2px 0 0 #FFFFFF;
+    display: inline-block; /*muestas los items en forma de columna*/
+}
+nav li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: lighter;
+    font-size: 25px;
+    padding: 0 50px;
+}
+.option::after {
+    content: ' ';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .3s;
+}
+.option:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+/*imagen animada*/
+.tecnologia {
+    width: 100%;
+    margin: auto;
+    height: 1000px;
+    background-image: linear-gradient(-225deg, rgba(44, 216, 213, 0.5) 0%, rgba(197, 193, 255, 0.5) 56%, rgba(255, 186, 195, 0.5) 100%), url(img/wader.jpg);
+    background-size: cover;
+}
+/*texto animado*/
+.texto-animado {
+    font-family: 'Nanum Myeongjo', serif;
+    padding: 0;
+    display: flex;
+    width: 600px;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+   overflow: hidden;
+}
+.texto-animado ul {
+    font-family: 'Nanum Myeongjo', serif;
+    list-style: none;
+    padding-left: 15px;
+    margin: 0;
+    padding: 0;
+    animation: rotar 10s infinite;
+}
+@keyframes rotar {
+    0%{ margin-top: 0;}
+    20% { margin-top: 0;}
+
+    25%{ margin-top: -60px;}
+    50%{margin-top: -60px;}
+  
+    55%{margin-top: -120px;}
+    80%{margin-top: -120px;}
+
+    85%{margin-top: -60px;}
+    95%{margin-top: -60px;}
+
+    100%{margin-top: 0;}
+
+}
+/**nombre del equipo*/
+.titulo {
+    letter-spacing: 2px;
+    text-align: center;
+    position: absolute;
+    color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    font-family: 'Jura', sans-serif;
+    font-size: 3em;
+    transform: translateX(-50%) translateY(-50%);
+}
+/*diseño para titulos y parrafos*/
+.inicio {
+    width: 85%;
+    margin: auto;
+    position: relative;
+}
+#texto-inicio {
+    width: 70%;
+    top: 0;
+    padding-top: 7em;
+}
+.inicio h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 22px;
+}
+.inicio p {
+    font-family: 'Prata', serif;
+    text-align: justify;
+    font-size: 18px;
+    padding-top: 15px;
+}
+#vida-marina {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 34%;
+    right: 4%;
+    background-image: linear-gradient(120deg, rgba(132, 250, 175, 0.200) 0%, rgba(143, 210, 244, 0.200) 100%);
+    border-radius: 4em;
+}
+/*texto quienes*/
+.quienes-somos {
+    width: 85%;
+    margin: auto;
+    position: relative;
+  /*  border: 2px solid #000000;*/
+}
+#texto-quienes-somos {
+    width: 70%;
+   /* border: 2px solid #000000;*/
+}
+.quienes-somos h2 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 22px;
+    text-align: center;
+    padding-top: 3em;
+}
+.quienes-somos p {
+    font-family: 'Prata', serif;
+    padding-top: 22px;
+    text-align: justify;
+    font-size: 18px;
+    position: relative;
+    left: 40%;
+
+}
+#equipo {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 10%;
+    left: 10%;  
+}
+/*loader de "alcance"*/
+.sk-folding-cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+  }
+  
+  .sk-folding-cube .sk-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); 
+  }
+  .sk-folding-cube .sk-cube:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+    -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+            animation: sk-foldCubeAngle 2.4s infinite linear both;
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+  }
+  .sk-folding-cube .sk-cube2 {
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+            transform: scale(1.1) rotateZ(90deg);
+  }
+  .sk-folding-cube .sk-cube3 {
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+            transform: scale(1.1) rotateZ(180deg);
+  }
+  .sk-folding-cube .sk-cube4 {
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+            transform: scale(1.1) rotateZ(270deg);
+  }
+  .sk-folding-cube .sk-cube2:before {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .sk-folding-cube .sk-cube3:before {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; 
+  }
+  .sk-folding-cube .sk-cube4:before {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s;
+  }
+  @-webkit-keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    } 
+  }
+  
+  @keyframes sk-foldCubeAngle {
+    0%, 10% {
+      -webkit-transform: perspective(140px) rotateX(-180deg);
+              transform: perspective(140px) rotateX(-180deg);
+      opacity: 0; 
+    } 25%, 75% {
+      -webkit-transform: perspective(140px) rotateX(0deg);
+              transform: perspective(140px) rotateX(0deg);
+      opacity: 1; 
+    } 90%, 100% {
+      -webkit-transform: perspective(140px) rotateY(180deg);
+              transform: perspective(140px) rotateY(180deg);
+      opacity: 0; 
+    }
+  }
+#loader {
+    position: absolute;
+    left: 15%;
+    top: 40%;
+}
+#img-mision {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 5%;
+}
+/*diseño para el footer*/
+#particles-js {
+    background: linear-gradient(to bottom, #2b5876, #4e4376);
+    bottom: 0;
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+#contacto {
+  position: absolute;
+  color: #FFFFFF;
+  left: 20%;
+  top: 35%;
+  letter-spacing: 3px;
+}
+.contacto {
+    font-size: 45px;
+    font-family: 'Nanum Myeongjo', serif;
+
+}
+#informacion {
+    font-size: 25px;
+    font-family: 'Nanum Myeongjo', serif;
+    padding-top: 10px;
+}
+.redes {
+    position: absolute;
+    bottom: 10%;
+    right: 40%;
+}
+.icon {
+    font-size: 45px;
+    padding-left: 25px;
+    color: #FFFFFF;
+}
+.ubicacion {
+    letter-spacing: 3px;
+    right: 20%;
+    top: 35%;
+    position: absolute;
+    color: #FFFFFF;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#ubicacion-titulo {
+    font-size: 45px;
+}
+#ubicacion {
+    font-size: 25px;
+}
+#linea {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    bottom: 5%;
+    height: 1px;
+    background: #FFFFFF;
+}
